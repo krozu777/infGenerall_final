@@ -6,7 +6,38 @@ body{
     
 }
 h1,h2,h3 {
-    font-family: Poppins;
+    font-family: monospace;
+}
+.tituloH1{
+    font-size: 2.5rem;
+}
+.h1teoria{
+    color: rgb(53, 20, 172);
+    margin-left: 100px;
+}
+.hpsico{
+    color: rgb(0, 0, 0);
+    margin-left: 100px;
+}
+.hvision{
+    color: rgb(200, 8, 126);
+    margin-left: 20px;
+}
+.h1arte{
+    color: rgb(239, 64, 0);
+}
+.h1Cine{
+    font-size:3rem;
+    color: rgb(19, 79, 2);
+}
+.h1Mus{
+    color: pink;
+}
+.h1Ins{
+    color: rgb(179, 22, 22);
+}
+.hnatu{
+    color: rgb(18, 99, 18);
 }
 #h3_circulos {
     text-align: center;
@@ -21,8 +52,8 @@ h1,h2,h3 {
 /* NAV */
 #nav{
     font-family: monospace;
-    background-color: #ffffff52;
-    width: 40%; /* Reduce el ancho a la mitad */
+    background-color: #f5daf033;
+    width: 80%; /* Reduce el ancho a la mitad */
     margin: auto; /* Centra horizontalmente */
     position: relative; /* Asegura que el margen automático funcione bien */ width: 50%; /* Reduce el ancho a la mitad */
     margin: auto; /* Centra horizontalmente */    
@@ -61,8 +92,8 @@ h1,h2,h3 {
     margin: 20px auto;
 
 }
-.media_teoriacolor img {
-    max-width: 30%;
+.media_teoria {
+    width: 200px;
     
  }
 
@@ -74,7 +105,8 @@ h1,h2,h3 {
 
 .table-header {
     text-align: center;
-    background-color: #ffe8f0;
+    color: rgb(255, 255, 255);
+    background-color: #121111;
 }
 .rojo,.azul,.amarillo,.verde,.naranja,.morado,.camafeo-c,.camafeo-f,.pastel,.oscuro,.quebrado,.negro,
 .blanco,.gris,.cyan,.magenta{
@@ -159,20 +191,127 @@ h1,h2,h3 {
 .magenta{
     background-color: magenta;
 }
-/* Additional styles for the flex
 
+.letras-cromatico {
+    display: inline;
+  }
+
+  .letras-cromatico span {
+    font-size: 1.5rem; /* Tamaño de la fuente */
+    font-weight: bold;
+  }
+
+  /* Colores del Círculo Cromático Clásico (Pigmentos Tradicionales) */
+  .letras-cromatico span:nth-child(1) { color: red; }       /* Rojo */
+  .letras-cromatico span:nth-child(2) { color: blue; }    /* Naranja */
+  .letras-cromatico span:nth-child(3) { color: yellow; }    /* Amarillo */
  
 
+  /* Colores del Círculo Cromático RGB (Modelo Aditivo) */
+  .letras-cromatico span:nth-child(4) { color: red; }       /* Rojo */
+  .letras-cromatico span:nth-child(5) { color: green; }    /* Naranja */
+  .letras-cromatico span:nth-child(6) { color: blue; }    /* Amarillo */
+
+  /* Colores del Círculo Cromático CMY/CMYK */
+  .letras-cromatico span:nth-child(7) { color: cyan; }      /* Cyan */
+  .letras-cromatico span:nth-child(8) { color: magenta; }   /* Magenta */
+  .letras-cromatico span:nth-child(9) { color: yellow; }    /* Amarillo */
+  .letras-cromatico span:nth-child(10) { color: black; }     /* Negro */
+/* Additional styles for the flex
+/*PSICOLOGIA DEL COLOR */
+ 
+.frio {
+    color: blue; /* Azul para frío */
+}
+
+.caliente {
+    color: orange; /* Naranja para caliente */
+}
+.emociones {
+    display: inline;
+  }
+  
+  .emociones span {
+    font-size: 2rem; /* Tamaño de la fuente */
+    font-weight: bold;
+  }
+  
+  .emociones span:nth-child(1) {
+    color: red;
+  }
+  
+  .emociones span:nth-child(2) {
+    color: orange;
+  }
+  
+  .emociones span:nth-child(3) {
+    color: yellow;
+  }
+  
+  .emociones span:nth-child(4) {
+    color: green;
+  }
+  
+  .emociones span:nth-child(5) {
+    color: blue;
+  }
+  
+  .emociones span:nth-child(6) {
+    color: indigo;
+  }
+  
+  .emociones span:nth-child(7) {
+    color: violet;
+  }
+  
+  .emociones span:nth-child(8) {
+    color: pink;
+  }
+  
+  .emociones span:nth-child(9) {
+    color: brown;
+  }
+  
 /*COLOR EN EL ARTE*/
 
 #img_colArte{
    height: 400px;
 }
+/*NATURALEZA*/
+.img_naturaleza{
+    width: 300px;
+    height: 200px;
+    margin: 5px auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+.span_natu{
+    font-weight: bolder;
+} 
+.resaltado_natu{
+    background-color: #f6d3d3;
+
+}
+.resaltado{
+    background-color: #f6d3d3;
+    font-weight: bold;
+  }
+
 /* CINE, INSTALACIONES ++ */
 
 #media_colorArte{
     max-width:80%;
     max-height: 90%;
+}
+
+.color-box {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 4px;
 }
 #media_colorArte
 /*GALERIAS*/
@@ -196,6 +335,10 @@ h1,h2,h3 {
 .gallery img {
     width: 100%;
      margin-bottom: 20px;
+}
+.yayoi_galeria img{
+    width: 100%;
+    height: 200px;
 }
 
 /* columnas costumizables para las dos paginas de galerias*/

@@ -5,6 +5,10 @@ body{
     background-color: #d98787;
     
 }
+
+.strong{
+    font-weight: bolder;
+}
 h1,h2,h3 {
     font-family: monospace;
 }
@@ -84,6 +88,34 @@ h1,h2,h3 {
   
 
 /*TEORIA COLOR*/
+
+.teoria_rojo {
+    color: red;
+}
+
+.teoria_anaranjado {
+    color: orange;
+}
+
+.teoria_amarillo {
+    color: rgb(222, 222, 21);
+}
+
+.teoria_verde {
+    color: green;
+}
+
+.teoria_azul {
+    color: blue;
+}
+
+.teoria_anil {
+    color: indigo;
+}
+
+.teoria_violeta {
+    color: violet;
+}
 
 #circuloscromaticos {
     max-width: 80%;
@@ -217,8 +249,69 @@ h1,h2,h3 {
   .letras-cromatico span:nth-child(8) { color: magenta; }   /* Magenta */
   .letras-cromatico span:nth-child(9) { color: yellow; }    /* Amarillo */
   .letras-cromatico span:nth-child(10) { color: black; }     /* Negro */
-/* Additional styles for the flex
+/* Additional styles for the flex*/
+
+.ausencia{
+    background-color: black;
+    color: white;
+}
+
+.ausencia_gris{
+    border: 1px solid black;
+    max-width: 50%;
+    margin: 5px;
+    padding: 5px;
+}
+
+.table-teoria {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+.table-teoria th, .table-teoria td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.table-teoria thead {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.table-teoria tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .table-teoria thead {
+        display: none;
+    }
+    
+    .table-teoria tbody, .table-teoria tr, .table-teoria td {
+        display: block;     
+        width: 100%;
+    }
+    
+    .table-teoria td {
+        text-align: left;
+        padding: 10px;
+        position: relative;
+    }
+    
+    .table-teoria td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        color: #333;
+        margin-bottom: 5px;
+    }
+}
+
 /*PSICOLOGIA DEL COLOR */
+
  
 .frio {
     color: blue; /* Azul para frío */
@@ -271,6 +364,10 @@ h1,h2,h3 {
   .emociones span:nth-child(9) {
     color: brown;
   }
+
+
+
+  
   
 /*COLOR EN EL ARTE*/
 
@@ -422,4 +519,11 @@ h1,h2,h3 {
     height: 800px; /* Mantén una proporción adecuada */
     object-fit: cover; /* Recorta y ajusta la imagen sin deformarla */
     display: block;
+}
+
+/*JUEGO*/
+
+.container-canvas{
+    width: 90vw;
+    height: 45vw;
 }

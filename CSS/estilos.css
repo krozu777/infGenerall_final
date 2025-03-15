@@ -365,7 +365,10 @@ h1,h2,h3 {
     color: brown;
   }
 
-
+.img_psico{
+    max-width: 450px;
+    aspect-ratio: 1.4/1;
+}
 
   
   

@@ -1,75 +1,144 @@
 /*TODAS PAGINAS*/
-body{
+body {
     margin: 20px 20px auto;
     padding: 10px 30px 10px 30px;
     background-color: #d98787;
-    
+
 }
 
-.strong{
+.strong {
     font-weight: bolder;
 }
-h1,h2,h3 {
+
+h1,
+h2,
+h3 {
     font-family: monospace;
 }
-.tituloH1{
+
+.h1homePage {
+    background: url('/img/homepage-titulo.jpg') no-repeat center center / cover;
+    width: 50%;
+    /* O el tamaño que prefieras */
+    margin: 10px auto;
+    /* Centra el bloque */
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgba(128, 128, 128, 0.37);
+
+    /* Tamaño de la letra */
+    font-size: 3rem;
+    font-weight: bold;
+
+    -webkit-text-stroke: 1px rgb(255, 40, 140);
+    /* Grosor y color del contorno */
+
+    /* Sombra en el texto */
+    text-shadow: 10px 10px 10px rgba(158, 158, 158, 0.7);
+
+    /* Alineación del texto */
+    text-align: center;
+    /* Centra el texto */
+}
+
+
+.tituloH1 {
     font-size: 2.5rem;
 }
-.h1teoria{
-    color: rgb(53, 20, 172);
-    margin-left: 100px;
+
+.h1teoria {
+    color: rgb(16, 184, 235);
+    margin-left: 5px;
 }
-.hpsico{
+
+.hpsico {
     color: rgb(0, 0, 0);
-    margin-left: 100px;
+    margin-left: 5px;
 }
-.hvision{
-    color: rgb(200, 8, 126);
-    margin-left: 20px;
+
+.hvision {
+    color: rgb(255, 2, 158);
+    margin-left: 5px;
 }
-.h1arte{
-    color: rgb(239, 64, 0);
+
+.h1int {
+    color: rgb(111, 255, 0);
+    margin-left: 5px;
 }
-.h1Cine{
-    font-size:3rem;
+
+.h1arte {
+    background: url('/complementarias/img/colorenelarte.jpg') no-repeat center center / cover;
+    width: 50%;
+    margin: 10px auto;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgba(128, 128, 128, 0.37);
+    font-size: 1.5rem;
+    font-weight: bold;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.h1Cine {
+    font-size: 3rem;
     color: rgb(19, 79, 2);
 }
-.h1Mus{
+
+.h1fot {
+    color: #a322aa;
+}
+
+.h1Mus {
     color: pink;
 }
-.h1Ins{
+
+.h1Ins {
     color: rgb(179, 22, 22);
 }
-.hnatu{
-    color: rgb(18, 99, 18);
+
+.hnatu {
+    color: rgb(0, 152, 13);
 }
+
 #h3_circulos {
     text-align: center;
 }
+
 #homepage_div img {
-   
+
     width: 500px;
-    height: 1000px;  /* Mantiene la proporción */
-    margin: 0 auto;  /* Centra las imágenes */
+    height: 1000px;
+    /* Mantiene la proporción */
+    margin: 0 auto;
+    /* Centra las imágenes */
     display: block;
 }
+
 /* NAV */
-#nav{
+#nav {
     font-family: monospace;
-    background-color: #f5daf033;
-    width: 80%; /* Reduce el ancho a la mitad */
-    margin: auto; /* Centra horizontalmente */
-    position: relative; /* Asegura que el margen automático funcione bien */ width: 50%; /* Reduce el ancho a la mitad */
-    margin: auto; /* Centra horizontalmente */    
+    background-color: #fcc5f233;
+    width: 80%;
+    /* Reduce el ancho a la mitad */
+    margin: auto;
+    /* Centra horizontalmente */
+    position: relative;
+    /* Asegura que el margen automático funcione bien */
+    width: 50%;
+    /* Reduce el ancho a la mitad */
+    margin: auto;
+    /* Centra horizontalmente */
 }
 
 /* NAV*/
 .navbar-nav a {
-    color: black; /* Cambiado a negro */
+    color: black;
+    /* Cambiado a negro */
 }
 
 .navbar-nav a:hover {
-    color: #da7199 !important;
+    color: #ea226f !important;
 }
 
 #nav .navbar-nav {
@@ -77,15 +146,47 @@ h1,h2,h3 {
     justify-content: center;
     width: 100%;
 }
+
 /* HOME PAGE*/
 
 .carousel-item img {
-    max-height: 900px; /* Ajusta la altura máxima según necesites */
-    width: auto; /* Mantiene la proporción */
-    margin: 0 auto; /* Centra la imagen */
+    max-height: 900px;
+    /* Ajusta la altura máxima según necesites */
+    width: auto;
+    /* Mantiene la proporción */
+    margin: 0 auto;
+    /* Centra la imagen */
     display: block;
-  }
-  
+}
+
+/* Estilo por defecto para pantallas grandes (computadoras) */
+.img_carrusel_homepage {
+    width: 600px;
+    /* Asegura que la imagen ocupe el 100% del ancho del contenedor */
+    max-width: 600px;
+    /* Limita el tamaño máximo para pantallas grandes */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    object-fit: contain;
+    /* Ajusta la imagen para que no se recorte y mantenga su proporción */
+}
+
+/* Estilo para pantallas más pequeñas (móviles) */
+@media (max-width: 768px) {
+
+    /* Dispositivos con un ancho de pantalla menor a 768px */
+    .img_carrusel_homepage {
+        max-width: 100%;
+        /* No limita el ancho en pantallas móviles */
+        height: auto;
+        /* Mantiene la proporción de la imagen */
+        object-fit: contain;
+        /* Asegura que la imagen se vea completa */
+    }
+}
+
+
+
 
 /*TEORIA COLOR*/
 
@@ -124,12 +225,13 @@ h1,h2,h3 {
     margin: 20px auto;
 
 }
+
 .media_teoria {
     width: 200px;
-    
- }
 
- .color-table {
+}
+
+.color-table {
     width: 100%;
     margin-bottom: 20px;
     border-collapse: collapse;
@@ -140,13 +242,29 @@ h1,h2,h3 {
     color: rgb(255, 255, 255);
     background-color: #121111;
 }
-.rojo,.azul,.amarillo,.verde,.naranja,.morado,.camafeo-c,.camafeo-f,.pastel,.oscuro,.quebrado,.negro,
-.blanco,.gris,.cyan,.magenta{
+
+.rojo,
+.azul,
+.amarillo,
+.verde,
+.naranja,
+.morado,
+.camafeo-c,
+.camafeo-f,
+.pastel,
+.oscuro,
+.quebrado,
+.negro,
+.blanco,
+.gris,
+.cyan,
+.magenta {
     text-align: center;
     height: 100px;
     width: 50px;
     border: 2px solid rgba(255, 93, 142, 0.223);
 }
+
 .rojo {
     background-color: rgb(255, 0, 0);
     color: white;
@@ -167,13 +285,16 @@ h1,h2,h3 {
     background-color: rgb(0, 255, 0);
     color: black;
 }
-.naranja{
+
+.naranja {
     background-color: orangered;
-    color: black;   
+    color: black;
 }
-.morado{
+
+.morado {
     background-color: rgb(162, 0, 255);
 }
+
 .camafeo-c {
     background-color: rgb(255, 69, 0);
     height: 200px;
@@ -217,46 +338,89 @@ h1,h2,h3 {
     background-color: rgb(128, 128, 128);
     color: white;
 }
-.cyan{
+
+.cyan {
     background-color: cyan;
 }
-.magenta{
+
+.magenta {
     background-color: magenta;
 }
 
 .letras-cromatico {
     display: inline;
-  }
+}
 
-  .letras-cromatico span {
-    font-size: 1.5rem; /* Tamaño de la fuente */
+.letras-cromatico span {
+    font-size: 1.5rem;
+    /* Tamaño de la fuente */
     font-weight: bold;
-  }
+}
 
-  /* Colores del Círculo Cromático Clásico (Pigmentos Tradicionales) */
-  .letras-cromatico span:nth-child(1) { color: red; }       /* Rojo */
-  .letras-cromatico span:nth-child(2) { color: blue; }    /* Naranja */
-  .letras-cromatico span:nth-child(3) { color: yellow; }    /* Amarillo */
- 
+/* Colores del Círculo Cromático Clásico (Pigmentos Tradicionales) */
+.letras-cromatico span:nth-child(1) {
+    color: red;
+}
 
-  /* Colores del Círculo Cromático RGB (Modelo Aditivo) */
-  .letras-cromatico span:nth-child(4) { color: red; }       /* Rojo */
-  .letras-cromatico span:nth-child(5) { color: green; }    /* Naranja */
-  .letras-cromatico span:nth-child(6) { color: blue; }    /* Amarillo */
+/* Rojo */
+.letras-cromatico span:nth-child(2) {
+    color: blue;
+}
 
-  /* Colores del Círculo Cromático CMY/CMYK */
-  .letras-cromatico span:nth-child(7) { color: cyan; }      /* Cyan */
-  .letras-cromatico span:nth-child(8) { color: magenta; }   /* Magenta */
-  .letras-cromatico span:nth-child(9) { color: yellow; }    /* Amarillo */
-  .letras-cromatico span:nth-child(10) { color: black; }     /* Negro */
+/* Naranja */
+.letras-cromatico span:nth-child(3) {
+    color: yellow;
+}
+
+/* Amarillo */
+
+
+/* Colores del Círculo Cromático RGB (Modelo Aditivo) */
+.letras-cromatico span:nth-child(4) {
+    color: red;
+}
+
+/* Rojo */
+.letras-cromatico span:nth-child(5) {
+    color: green;
+}
+
+/* Naranja */
+.letras-cromatico span:nth-child(6) {
+    color: blue;
+}
+
+/* Amarillo */
+
+/* Colores del Círculo Cromático CMY/CMYK */
+.letras-cromatico span:nth-child(7) {
+    color: cyan;
+}
+
+/* Cyan */
+.letras-cromatico span:nth-child(8) {
+    color: magenta;
+}
+
+/* Magenta */
+.letras-cromatico span:nth-child(9) {
+    color: yellow;
+}
+
+/* Amarillo */
+.letras-cromatico span:nth-child(10) {
+    color: black;
+}
+
+/* Negro */
 /* Additional styles for the flex*/
 
-.ausencia{
+.ausencia {
     background-color: black;
     color: white;
 }
 
-.ausencia_gris{
+.ausencia_gris {
     border: 1px solid black;
     max-width: 50%;
     margin: 5px;
@@ -269,7 +433,8 @@ h1,h2,h3 {
     font-family: Arial, sans-serif;
 }
 
-.table-teoria th, .table-teoria td {
+.table-teoria th,
+.table-teoria td {
     border: 1px solid #ddd;
     padding: 12px;
     text-align: left;
@@ -289,18 +454,20 @@ h1,h2,h3 {
     .table-teoria thead {
         display: none;
     }
-    
-    .table-teoria tbody, .table-teoria tr, .table-teoria td {
-        display: block;     
+
+    .table-teoria tbody,
+    .table-teoria tr,
+    .table-teoria td {
+        display: block;
         width: 100%;
     }
-    
+
     .table-teoria td {
         text-align: left;
         padding: 10px;
         position: relative;
     }
-    
+
     .table-teoria td::before {
         content: attr(data-label);
         font-weight: bold;
@@ -312,97 +479,146 @@ h1,h2,h3 {
 
 /*PSICOLOGIA DEL COLOR */
 
- 
+
 .frio {
-    color: blue; /* Azul para frío */
+    color: blue;
+    /* Azul para frío */
 }
 
 .caliente {
-    color: orange; /* Naranja para caliente */
+    color: orange;
+    /* Naranja para caliente */
 }
+
 .emociones {
     display: inline;
-  }
-  
-  .emociones span {
-    font-size: 2rem; /* Tamaño de la fuente */
-    font-weight: bold;
-  }
-  
-  .emociones span:nth-child(1) {
-    color: red;
-  }
-  
-  .emociones span:nth-child(2) {
-    color: orange;
-  }
-  
-  .emociones span:nth-child(3) {
-    color: yellow;
-  }
-  
-  .emociones span:nth-child(4) {
-    color: green;
-  }
-  
-  .emociones span:nth-child(5) {
-    color: blue;
-  }
-  
-  .emociones span:nth-child(6) {
-    color: indigo;
-  }
-  
-  .emociones span:nth-child(7) {
-    color: violet;
-  }
-  
-  .emociones span:nth-child(8) {
-    color: pink;
-  }
-  
-  .emociones span:nth-child(9) {
-    color: brown;
-  }
+}
 
-.img_psico{
+.emociones span {
+    font-size: 2rem;
+    /* Tamaño de la fuente */
+    font-weight: bold;
+}
+
+.emociones span:nth-child(1) {
+    color: red;
+}
+
+.emociones span:nth-child(2) {
+    color: orange;
+}
+
+.emociones span:nth-child(3) {
+    color: yellow;
+}
+
+.emociones span:nth-child(4) {
+    color: green;
+}
+
+.emociones span:nth-child(5) {
+    color: blue;
+}
+
+.emociones span:nth-child(6) {
+    color: indigo;
+}
+
+.emociones span:nth-child(7) {
+    color: violet;
+}
+
+.emociones span:nth-child(8) {
+    color: pink;
+}
+
+.emociones span:nth-child(9) {
+    color: brown;
+}
+
+.img_psico {
     max-width: 450px;
     aspect-ratio: 1.4/1;
 }
 
-  
-  
+
+
 /*COLOR EN EL ARTE*/
 
-#img_colArte{
-   height: 400px;
+#img_colArte {
+    height: 400px;
 }
+
+.art_cyan {
+    color: #00AEEF;
+}
+
+/* Cyan */
+.art_magenta {
+    color: #EC008C;
+}
+
+/* Magenta */
+.art_yellow {
+    color: #FFF200;
+}
+
+/* Amarillo */
+.art_black {
+    color: #231F20;
+}
+
+/* Negro */
+.art_lightcyan {
+    color: #8EE5EE;
+}
+
+/* Cyan claro */
+.art_lightmagenta {
+    color: #FF66B2;
+}
+
+/* Magenta claro */
+.art_lightyellow {
+    color: #FFEE99;
+}
+
+/* Amarillo claro */
+.art_gray {
+    color: #7D7D7D;
+}
+
+/* Gris */
+
+
 /*NATURALEZA*/
-.img_naturaleza{
+.img_naturaleza {
     width: 300px;
     height: 200px;
     margin: 5px auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    }
+}
 
-.span_natu{
+.span_natu {
     font-weight: bolder;
-} 
-.resaltado_natu{
-    background-color: #f6d3d3;
+}
+
+.resaltado_natu {
+    background-color: #efa82f91;
 
 }
-.resaltado{
-    background-color: #f6d3d3;
+
+.resaltado {
+    background-color: #68e5ec;
     font-weight: bold;
-  }
+}
 
 /* CINE, INSTALACIONES ++ */
 
-#media_colorArte{
-    max-width:80%;
+#media_colorArte {
+    max-width: 80%;
     max-height: 90%;
 }
 
@@ -413,10 +629,11 @@ h1,h2,h3 {
     margin-right: 10px;
     border-radius: 4px;
 }
+
 #media_colorArte
 /*GALERIAS*/
 
-.container-g { 
+.container-g {
     width: 100%;
     min-height: 50vh;
     display: flex;
@@ -434,18 +651,20 @@ h1,h2,h3 {
 
 .gallery img {
     width: 100%;
-     margin-bottom: 20px;
+    margin-bottom: 20px;
 }
-.yayoi_galeria img{
+
+.yayoi_galeria img {
     width: 100%;
     height: 200px;
 }
 
 /* columnas costumizables para las dos paginas de galerias*/
 .custom-width {
-            max-width: 1000px; 
-            margin: 0 auto; /* centrando la columna*/
-        }
+    max-width: 1000px;
+    margin: 0 auto;
+    /* centrando la columna*/
+}
 
 
 /* img de la página de desarrollador de sitio web */
@@ -453,80 +672,84 @@ h1,h2,h3 {
     max-width: 300px;
 }
 
-/* se le invierten los colores al carrusel para que esten en negro*/   
+/* se le invierten los colores al carrusel para que esten en negro*/
 .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-        filter: invert(100%);
-    }
+.carousel-control-next-icon {
+    filter: invert(100%);
+}
 
 
-    .container_color {
-      max-width: 900px;
-      margin: auto;
-      background: #ffffff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
- 
-  .color-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-  }
+.container_color {
+    max-width: 900px;
+    margin: auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-  .color-table2{
+
+.color-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.color-table2 {
     width: 50%;
-  }
-   
-  
-  .color-table th, .color-table td {
-      padding: 12px;
-      border: 1px solid #ddd;
-      text-align: center;
-  }
-  
-  .color-table th {
-      background-color: #333;
-      color: white;
-  }
-  
-  .color-table .color-sample {
-      width: 40px;
-      height: 40px;
-      border-radius: 5px;
-      display: inline-block;
-      border: 1px solid #ccc;
-  }
-  
-  .color-table .category {
-      background-color: #222;
-      color: white;
-      font-weight: bold;
-      text-align: center;
-      font-size: 1.2em;
-  }
-  
-  .color-table tr:nth-child(even) {
-      background-color: #6afede16;
-  }
-  
-  .color-table tr:hover {
-      background-color: #ffd5f5;
-  } 
+}
 
 
-  #media_colorArte {
-    width: 500px; /* Ajusta según tu necesidad */
-    height: 800px; /* Mantén una proporción adecuada */
-    object-fit: cover; /* Recorta y ajusta la imagen sin deformarla */
+.color-table th,
+.color-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.color-table th {
+    background-color: #333;
+    color: white;
+}
+
+.color-table .color-sample {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    display: inline-block;
+    border: 1px solid #ccc;
+}
+
+.color-table .category {
+    background-color: #222;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.color-table tr:nth-child(even) {
+    background-color: #6afede16;
+}
+
+.color-table tr:hover {
+    background-color: #ffd5f5;
+}
+
+
+#media_colorArte {
+    width: 500px;
+    /* Ajusta según tu necesidad */
+    height: 800px;
+    /* Mantén una proporción adecuada */
+    object-fit: cover;
+    /* Recorta y ajusta la imagen sin deformarla */
     display: block;
 }
 
 /*JUEGO*/
 
-.container-canvas{
+.container-canvas {
     width: 90vw;
     height: 45vw;
 }

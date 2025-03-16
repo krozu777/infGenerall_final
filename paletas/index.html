@@ -4,10 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Explora la interacción del color y las paletas cromáticas en el arte, el diseño y la percepción humana.">
-    <meta name="keywords" content="color, teoría del color, paletas cromáticas, arte, diseño, percepción">
-    <meta name="author" content="letColor">
     <title>Let Color - Interacción del Color y Paletas Cromáticas</title>
     <link rel="stylesheet" href="../CSS/estilos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -16,9 +12,9 @@
 
 <body>
     <!-- NAV -->
-    <nav class="navbar navbar-expand-lg p-2 fs-5 bg-dark">
+    <nav class="navbar navbar-expand-lg p-2 fs-5" id="nav">
         <div class="container-fluid">
-            <a class="navbar-brand text-light" href="../index.html">Let Color;</a>
+            <a class="navbar-brand" href="../index.html">Home Page</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -26,11 +22,53 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="acercade.html">Acerca</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Conceptos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/teoria-del-color/index.html"> Teoría </a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/psicologia-del-color/index.html"> Psicología </a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/vision-humana/index.html"> Visión Humana </a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/naturaleza/index.html"> Naturaleza </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="color_arte.html" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Arte
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../color-arte/index.html"> El color en el Arte</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/complementarias/color_cine.html">Cine</a></li>
+                            <li><a class="dropdown-item" href="/complementarias/color_fotografia.html"> Fotografía </a>
+                            </li>
+                            <li><a class="dropdown-item" href="/complementarias/color_instalaciones.html"> Instalaciones
+                                </a></li>
+                            <li><a class="dropdown-item" href="/complementarias/color_musica.html"> Música </a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="contacto.html">Contacto</a>
+                        <a class="nav-link" href="/juego/juego.html"> Juego </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/complementarias/acercade.html">Acerca</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/complementarias/contacto.html">Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -39,27 +77,31 @@
 
     <!-- CONTAINER -->
     <div class="container mt-5 mb-5">
-        <h1 class="tituloH1 text-start">Interacción ++ Paletas Cromáticas</h1>
+
 
         <div class="container mt-5 mb-5">
-            <h1 class="tituloH1 text-start">++ Paletas Cromáticas</h1>
-
+            <h1 class="tituloH1 h1int text-start">//Interacción</h1>
+            <h2 class="text-secondary text-start">++ Paletas Cromáticas</h2>
             <!-- DIV PRINCIPAL -->
             <div class="row d-flex mx-auto mb-5 my-3">
                 <!-- Introducción -->
                 <div class="col-12">
                     <p>
-                        Las paletas cromáticas son combinaciones de colores que interactúan de diversas maneras,
-                        creando armonías visuales y emociones particulares. Exploramos los diferentes tipos de paletas
-                        cromáticas y su impacto en la percepción visual.
+                        Las paletas cromáticas son combinaciones estratégicas de colores que interactúan entre sí de
+                        diversas maneras,
+                        influyendo en la percepción visual y en la respuesta emocional de quienes las observan. Su
+                        correcta aplicación es
+                        fundamental en distintas isciplinas como el diseño gráfico, la pintura, la moda, entre otras
+                        ramas del arte, ya que el color
+                        tiene el poder de comunicar <span class="strong"> evocar recuerdos y dirigir la atención.</span>
                     </p>
                 </div>
 
                 <!-- Tipos de Paletas Cromáticas -->
                 <div class="row d-flex align-items-center">
                     <!-- Columna de texto -->
-                    <div class="col-12 col-md-6 mb-4 mt-2">
-                        <h3>Tipos de Paletas Cromáticas</h3>
+                    <div class="col-12 col-md-6 mb-5 mt-2">
+                        <h3 class="text-secondary">Tipos: </h3>
                         <ul>
                             <li><strong>Acromática:</strong> Solo colores neutros (blancos, grises y negros).</li>
                             <li><strong>Monocromática:</strong> Un solo color con variaciones de tono, saturación y
@@ -78,29 +120,37 @@
                         <img src="/paletas/img/complementarios.jpg"
                             alt="Ejemplo de diferentes tipos de paletas cromáticas" class="img-fluid">
                     </div>
+
+                    <div class="col-md-6 d-flex align-items-center justify-content-center mx-auto mb-5 mt-5">
+                        <iframe width="1000" height="315" src="https://www.youtube.com/embed/N4XEoKJ7LMg"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="col-12 col-md-6 mb-5 mt-5">
+                        <h2 class="text-center">Mezclas de Colores</h2>
+                        <p>
+                            La mezcla de colores es un proceso <span class="strong ausencia">fundamental</span> en la
+                            creación de nuevas tonalidades y
+                            matices. Dependiendo del
+                            sistema utilizado, la combinación de colores puede dar lugar a efectos vibrantes o a tonos
+                            más opacos.
+                            Además de las mezclas primarias, la interacción entre colores secundarios y terciarios
+                            permite una gama aún más
+                            extensa de posibilidades cromáticas, influyendo en la percepción y en la armonía visual de
+                            una composición.
+
+                            Factores como <span class="strong">la saturación, el brillo y el contraste</span> también
+                            juegan un papel clave en
+                            la manera en que
+                            los colores se combinan y son interpretados por el ojo humano.
+                        </p>
+                    </div>
+
                 </div>
             </div>
-
-
-        </div>
-
-
-        <!-- Mezclas de Colores -->
-        <div class="container mt-5 mb-5">
-            <h2 class="text-center">Mezclas de Colores</h2>
-            <p class="text-center">
-                La mezcla de colores puede producir nuevos tonos. Existen dos tipos principales que ya vimos
-                anteriormente en <a href=""> TEORIA DEL COLOR</a>:
-                <strong>aditiva</strong> (rojo, verde y azul crean blanco) y
-                <strong>sustractiva</strong> (cian, magenta y amarillo producen tonos oscuros).
-            </p>
-            <div class="col-md-6 mb-4 d-flex align-items-center justify-content-center mx-auto mb-4 mt-2 mb-5 mt-5">
-                <iframe width="1000" height="315" src="https://www.youtube.com/embed/N4XEoKJ7LMg"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-            </div>
+            <!-- Mezclas de Colores -->
             <!-- Aplicaciones Prácticas -->
             <div class="mt-5">
                 <h2 class="text-center">Aplicaciones Prácticas</h2>
@@ -147,37 +197,37 @@
 
                 </div>
             </div>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <footer class="text-center text-lg-start bg-light text-muted">
+        <div class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <div class="me-5 d-none d-lg-block">
+                <span>Conéctate con nosotros en redes sociales:</span>
             </div>
+            <div>
+                <a href="https://facebook.com/letColor" class="me-4 text-reset"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/letColor" class="me-4 text-reset"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com/letColor" class="me-4 text-reset"><i class="fab fa-instagram"></i></a>
             </div>
-            <!-- FOOTER -->
-            <footer class="text-center text-lg-start bg-light text-muted">
-                <div class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-                    <div class="me-5 d-none d-lg-block">
-                        <span>Conéctate con nosotros en redes sociales:</span>
-                    </div>
-                    <div>
-                        <a href="https://facebook.com/letColor" class="me-4 text-reset"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a href="https://twitter.com/letColor" class="me-4 text-reset"><i
-                                class="fab fa-twitter"></i></a>
-                        <a href="https://instagram.com/letColor" class="me-4 text-reset"><i
-                                class="fab fa-instagram"></i></a>
+        </div>
+
+        <section>
+            <div class="container text-center text-md-start mt-5">
+                <div class="row mt-3">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">letColor</h6>
+                        <p>Explora el color desde su teoría hasta su impacto en el arte y la percepción humana.
+                        </p>
                     </div>
                 </div>
-
-                <section>
-                    <div class="container text-center text-md-start mt-5">
-                        <div class="row mt-3">
-                            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                                <h6 class="text-uppercase fw-bold mb-4">letColor</h6>
-                                <p>Explora el color desde su teoría hasta su impacto en el arte y la percepción humana.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <div class="text-center p-3 bg-dark text-light">© 2025 Let Color. Todos los derechos reservados.</div>
-            </footer>
+            </div>
+        </section>
+        <div class="text-center p-3 bg-dark text-light">© 2025 Let Color. Todos los derechos reservados.</div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

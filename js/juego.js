@@ -8,7 +8,7 @@ const paleta_RYB = [[255, 0, 0], [255, 255, 0], [0, 0, 255]];
 
 // FASE2. LABERINTO
 let cols, rows;
-let w = 100;
+let w = 50 ;
 let grid = [];
 let stack = [];
 let current;
@@ -71,9 +71,9 @@ let questions = [
 
 //FUNCIONES
 function preload(){
-    imgs_paletas.push(loadImage('../img/cine1.jpg'));
-    imgs_paletas.push(loadImage('../img/pelicula2.jpg'));
-    imgs_paletas.push(loadImage('../img/cine1.png'));
+    imgs_paletas.push(loadImage('img/paleta1.jpg'));
+    imgs_paletas.push(loadImage('img/paleta1.jpg'));
+    imgs_paletas.push(loadImage('img/paleta1.jpg'));
 }
 
 function setup() {
@@ -82,6 +82,7 @@ function setup() {
   updateSelectedPalette();
   cols = floor(width / w);
   rows = floor(height / w);
+  textFont("Georgia");
 }
 
 function draw() {
@@ -97,16 +98,16 @@ function draw() {
 }
 
 function drawStartScreen() {
-  background(50);
-  fill(255);
+  background("black");
+  fill(random(255), random(255), random(255));
   textSize(40);
   textAlign(CENTER, CENTER);
-  text("COLOR GAME", width / 2, height / 3);
+  text("FOUR F", width / 2, height / 3);
 
   textSize(20);
   text("Haz clic para empezar", width / 2, height / 2);
 
-  fill(100, 200, 255);
+  fill("100, 200, 255");
   rect(width / 2 - 50, height / 2 + 40, 100, 40, 10);
   fill(0);
   textSize(18);
@@ -137,7 +138,7 @@ function drawPaletteSelection() {
   fill(textColor);
   textSize(20);
   textAlign(CENTER);
-  text("Haz clic para cambiar la paleta. Presiona ENTER para continuar.", width / 2, height - 20);
+  text("Selecciona tu paleta. Presiona ENTER para continuar.", width / 2, height - 20);
 }
 
 function drawLabyrinth() {

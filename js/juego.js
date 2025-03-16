@@ -8,7 +8,7 @@ const paleta_RYB = [[255, 0, 0], [255, 255, 0], [0, 0, 255]];
 
 // FASE2. LABERINTO
 let cols, rows;
-let w = 50 ;
+let w = 100;
 let grid = [];
 let stack = [];
 let current;
@@ -25,55 +25,55 @@ let imgs_paletas = []
 // FASE3. TRIVIA
 
 let questions = [
-    {
-      question: "¿Qué color es el opuesto al verde en el círculo cromático?",
-      options: ["Rojo", "Azul", "Amarillo", "Naranja"],
-      correct: 0,
-    },
-    {
-      question: "¿Cuál de estos colores es un color luz primario?",
-      options: ["Cyan", "Magenta", "Verde", "Amarillo"],
-      correct: 2,
-    },
-    {
-      question:
-        "¿Qué fenómeno explica por qué los colores \n parecen cambiar en diferentes iluminaciones?",
-      options: ["Metamerismo", "Dispersion", "Reflexión", "Refracción"],
-      correct: 0,
-    },
-    {
-      question:
-        "¿Qué células en la retina son responsables de la visión en color?",
-      options: ["Bastones", "Conos", "Fotorreceptores", "Amacrinas"],
-      correct: 1,
-    },
-    {
-      question:
-        "¿Qué teoría del color explica cómo el cerebro procesa los colores opuestos?",
-      options: [
-        "Teoría tricromática",
-        "Teoría del color oponente",
-        "Teoría de la absorción",
-        "Teoría espectral",
-      ],
-      correct: 1,
-    },
-  ];
-  
-  let currentQuestion = 0;
-  let  timeLeft = 20;
-  let  timer;
-  let selectedOption = -1;
-  let  gameOver_trivia = false;
-  let  score = 0;
-  let bandera_trivia = true;
+  {
+    question: "¿Qué color es el opuesto al verde en el círculo cromático?",
+    options: ["Rojo", "Azul", "Amarillo", "Naranja"],
+    correct: 0,
+  },
+  {
+    question: "¿Cuál de estos colores es un color luz primario?",
+    options: ["Cyan", "Magenta", "Verde", "Amarillo"],
+    correct: 2,
+  },
+  {
+    question:
+      "¿Qué fenómeno explica por qué los colores \n parecen cambiar en diferentes iluminaciones?",
+    options: ["Metamerismo", "Dispersion", "Reflexión", "Refracción"],
+    correct: 0,
+  },
+  {
+    question:
+      "¿Qué células en la retina son responsables de la visión en color?",
+    options: ["Bastones", "Conos", "Fotorreceptores", "Amacrinas"],
+    correct: 1,
+  },
+  {
+    question:
+      "¿Qué teoría del color explica cómo el cerebro procesa los colores opuestos?",
+    options: [
+      "Teoría tricromática",
+      "Teoría del color oponente",
+      "Teoría de la absorción",
+      "Teoría espectral",
+    ],
+    correct: 1,
+  },
+];
+
+let currentQuestion = 0;
+let timeLeft = 20;
+let timer;
+let selectedOption = -1;
+let gameOver_trivia = false;
+let score = 0;
+let bandera_trivia = true;
 
 
 //FUNCIONES
-function preload(){
-    imgs_paletas.push(loadImage('img/paleta1.jpg'));
-    imgs_paletas.push(loadImage('img/paleta1.jpg'));
-    imgs_paletas.push(loadImage('img/paleta1.jpg'));
+function preload() {
+  imgs_paletas.push(loadImage('img/paleta1.jpg'));
+  imgs_paletas.push(loadImage('img/paleta1.jpg'));
+  imgs_paletas.push(loadImage('img/paleta1.jpg'));
 }
 
 function setup() {
@@ -143,8 +143,8 @@ function drawPaletteSelection() {
 
 function drawLabyrinth() {
   // Fondo animado con la paleta seleccionada
-  let c =imgs_paletas[colorModeIndex].get(3,frameCount%400);
-  background(c[0],c[1],c[2]);
+  let c = imgs_paletas[colorModeIndex].get(3, frameCount % 400);
+  background(c[0], c[1], c[2]);
   bgColorStep += 0.02;
 
   if (!gameStarted) {
@@ -179,6 +179,12 @@ function drawLabyrinth() {
       ball.reset();
     }
   }
+  push();
+  fill(255);
+  textAlign(CENTER, CENTER);
+  textSize(30);
+  text("★", width - w / 2, height - w / 2)
+  pop();
 }
 
 function generateMaze() {
@@ -233,7 +239,8 @@ function index(i, j) {
 }
 
 function gameOver(message) {
-    clearInterval(interval);
+  clearInterval(interval);
+  if(gameState !== "laberythm") return;
   gameStarted = false;
   alert(message);
 }
@@ -312,145 +319,154 @@ class Cell {
     }
   }
 }
-  function drawQuestions() {
-    background("black");
-    fill(255);
-    textAlign(CENTER);
-    if(bandera_trivia){
-      textSize(20);
-      text('Ahora pondremos a prueba tus conocimientos del color!', 400, 200);
-      fill('grey')
-       textSize(15);
-      text('Presiona ENTER para continuar', 400, 240);
-      return;
-    }
-    !gameOver_trivia
-      ? (displayQuestion(), displayTimer(), displayOptions(), displayScore())
-      : displayGameOver();
-  }
-
-  function displayQuestion() {
-    textSize(16);
-    text(questions[currentQuestion].question, width / 2, 80);
-  }
-  
-  function displayOptions() {
-    textSize(14);
-    for (let i = 0; i < questions[currentQuestion].options.length; i++) {
-      let y = 140 + i * 40;
-      fill(
-        selectedOption === i
-          ? i === questions[currentQuestion].correct
-            ? "green"
-            : "red"
-          : "blue"
-      );
-      rect(250, y, 300, 30, 10);
-      fill(255);
-      text(questions[currentQuestion].options[i], 400, y + 20);
-    }
-  }
-  
-  function displayTimer() {
-    textSize(16);
-    fill(255, 204, 0);
-    text(`Tiempo: ${timeLeft}s`, width / 2, 30);
-  }
-  
-  function displayScore() {
-    textSize(16);
-    fill(255);
-    text(`Puntaje: ${score}/${questions.length}`, width / 2, height - 30);
-  }
-  
-  function displayGameOver() {
+function drawQuestions() {
+  background("black");
+  fill(255);
+  textAlign(CENTER);
+  if (bandera_trivia) {
     textSize(20);
-    text(
-      `¡Fin del juego! Puntaje: ${score}/${questions.length}`,
-      width / 2,
-      height / 2
-    );
+    text('Ahora pondremos a prueba tus conocimientos del color!', 400, 200);
+    fill('grey')
+    textSize(15);
+    text('Presiona ENTER para continuar', 400, 240);
+    return;
   }
-  
-  function countdown() {
-    if (!gameOver_trivia && --timeLeft <= 0) {
-        gameOver_trivia = true;
-      clearInterval(timer);
-    }
-  }
-    //EVENTOS
-  function mousePressed() {
-    if (gameState === "startScreen" && mouseX > width / 2 - 50 && mouseX < width / 2 + 50 && mouseY > height / 2 + 40 && mouseY < height / 2 + 80) {
-      gameState = "paletteSelection";
-    } else if (gameState === "paletteSelection") {
-      colorModeIndex = (colorModeIndex + 1) % 3;
-      updateSelectedPalette();
-    } else if (gameState === "questions"){
-        if (gameOver_trivia) return;
+  !gameOver_trivia
+    ? (displayQuestion(), displayTimer(), displayOptions(), displayScore())
+    : displayGameOver();
+}
+
+function displayQuestion() {
+  textSize(16);
+  text(questions[currentQuestion].question, width / 2, 80);
+}
+
+function displayOptions() {
+  textSize(14);
   for (let i = 0; i < questions[currentQuestion].options.length; i++) {
     let y = 140 + i * 40;
-    if (mouseX > 250 && mouseX < 550 && mouseY > y && mouseY < y + 30) {
-      selectedOption = i;
-      if (i === questions[currentQuestion].correct) score++;
-      setTimeout(() => {
-        currentQuestion++;
-        currentQuestion >= questions.length
-          ? ((gameOver_trivia = true), clearInterval(timer))
-          : ((timeLeft = 20), (selectedOption = -1));
-      }, 500);
-    }
+    fill(
+      selectedOption === i
+        ? i === questions[currentQuestion].correct
+          ? "green"
+          : "red"
+        : "blue"
+    );
+    rect(250, y, 300, 30, 10);
+    fill(255);
+    text(questions[currentQuestion].options[i], 400, y + 20);
   }
-    }
-  }
-  function keyPressed() {
-    if (gameState === "paletteSelection" && keyCode === ENTER ) {
-      gameState = "labyrinth";
-      
-      generateMaze();  // Aseguramos que el laberinto se genera al comenzar
-      ball = new Ball();  // Inicializamos la bola en el laberinto
-      gameStarted = true;  // Marcar el inicio del juego
-      clearInterval(interval);
-      interval = setInterval(() => {
-          if (timer_lab > 0) {
-              timer_lab--;
-          } else {
-              gameOver('Perdiste: Se acabó el tiempo');
-          }
-      }, 1000);
-    }
-    else if (gameState === "labyrinth"){
-  
-      if (keyCode === LEFT_ARROW) {
-          moveX = -2;
-          moveY = 0;
-      } else if (keyCode === RIGHT_ARROW) {
-          moveX = 2;
-          moveY = 0;
-      } else if (keyCode === UP_ARROW) {
-          moveX = 0;
-          moveY = -2;
-      } else if (keyCode === DOWN_ARROW) {
-          moveX = 0;
-          moveY = 2;
-      }
-    } else if (gameState === "questions") {
-        if(bandera_trivia && keyCode === ENTER){
-            bandera_trivia = false;
-            timer = setInterval(countdown, 1000);
-          }
-    }
-  }
-  function windowResized() {
+}
 
-    let cnv = document.querySelector("#defaultCanvas0");
-    let dvv = document.querySelector(".container-canvas");
-    let dvvFin = window.getComputedStyle(dvv);
-  
-    cnv.style.width = dvvFin.width;
-    cnv.style.height = dvvFin.height;
+function displayTimer() {
+  textSize(16);
+  fill(255, 204, 0);
+  text(`Tiempo: ${timeLeft}s`, width / 2, 30);
+}
+
+function displayScore() {
+  textSize(16);
+  fill(255);
+  text(`Puntaje: ${score}/${questions.length}`, width / 2, height - 30);
+}
+
+function displayGameOver() {
+  textSize(20);
+  text(
+    `¡Fin del juego! Puntaje: ${score}/${questions.length}`,
+    width / 2,
+    height / 2
+  ); 
+  fill("magenta");
+  rect(250, 300, 300, 30, 10);
+  fill("white");
+  text('Volver a empezar!', 400, 315);
+}
+
+function countdown() {
+  if (!gameOver_trivia && --timeLeft <= 0) {
+    gameOver_trivia = true;
+    clearInterval(timer);
   }
-  document.addEventListener("keydown", function(event) {
-    if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(event.key)) {
-        event.preventDefault();
+}
+//EVENTOS
+function mousePressed() {
+  if (gameState === "startScreen" && mouseX > width / 2 - 50 && mouseX < width / 2 + 50 && mouseY > height / 2 + 40 && mouseY < height / 2 + 80) {
+    gameState = "paletteSelection";
+  } else if (gameState === "paletteSelection") {
+    colorModeIndex = (colorModeIndex + 1) % 3;
+    updateSelectedPalette();
+  } else if (gameState === "questions") {
+    if (gameOver_trivia){
+      if (mouseX > 250 && mouseX < 550 && mouseY > 300 && mouseY < 330){
+       location.reload();
+        
+      }
+    };
+    for (let i = 0; i < questions[currentQuestion].options.length; i++) {
+      let y = 140 + i * 40;
+      if (mouseX > 250 && mouseX < 550 && mouseY > y && mouseY < y + 30) {
+        selectedOption = i;
+        if (i === questions[currentQuestion].correct) score++;
+        setTimeout(() => {
+          currentQuestion++;
+          currentQuestion >= questions.length
+            ? ((gameOver_trivia = true), clearInterval(timer))
+            : ((timeLeft = 20), (selectedOption = -1));
+        }, 500);
+      }
     }
+  }
+}
+function keyPressed() {
+  if (gameState === "paletteSelection" && keyCode === ENTER) {
+    gameState = "labyrinth";
+
+    generateMaze();  // Aseguramos que el laberinto se genera al comenzar
+    ball = new Ball();  // Inicializamos la bola en el laberinto
+    gameStarted = true;  // Marcar el inicio del juego
+    clearInterval(interval);
+    interval = setInterval(() => {
+      if (timer_lab > 0) {
+        timer_lab--;
+      } else {
+        gameOver('Perdiste: Se acabó el tiempo');
+      }
+    }, 1000);
+  }
+  else if (gameState === "labyrinth") {
+
+    if (keyCode === LEFT_ARROW) {
+      moveX = -2;
+      moveY = 0;
+    } else if (keyCode === RIGHT_ARROW) {
+      moveX = 2;
+      moveY = 0;
+    } else if (keyCode === UP_ARROW) {
+      moveX = 0;
+      moveY = -2;
+    } else if (keyCode === DOWN_ARROW) {
+      moveX = 0;
+      moveY = 2;
+    }
+  } else if (gameState === "questions") {
+    if (bandera_trivia && keyCode === ENTER) {
+      bandera_trivia = false;
+      timer = setInterval(countdown, 1000);
+    }
+  }
+}
+function windowResized() {
+
+  let cnv = document.querySelector("#defaultCanvas0");
+  let dvv = document.querySelector(".container-canvas");
+  let dvvFin = window.getComputedStyle(dvv);
+
+  cnv.style.width = dvvFin.width;
+  cnv.style.height = dvvFin.height;
+}
+document.addEventListener("keydown", function (event) {
+  if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(event.key)) {
+    event.preventDefault();
+  }
 });

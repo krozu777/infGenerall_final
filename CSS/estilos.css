@@ -19,26 +19,16 @@ h3 {
 .h1homePage {
     background: url('/img/homepage-titulo.jpg') no-repeat center center / cover;
     width: 50%;
-    /* O el tamaño que prefieras */
     margin: 10px auto;
-    /* Centra el bloque */
     padding: 20px;
     color: rgb(255, 255, 255);
     border: 2px solid rgba(128, 128, 128, 0.37);
-
-    /* Tamaño de la letra */
     font-size: 3rem;
     font-weight: bold;
-
     -webkit-text-stroke: 1px rgb(255, 40, 140);
-    /* Grosor y color del contorno */
-
-    /* Sombra en el texto */
     text-shadow: 10px 10px 10px rgba(158, 158, 158, 0.7);
-
-    /* Alineación del texto */
     text-align: center;
-    /* Centra el texto */
+
 }
 
 
@@ -100,7 +90,10 @@ h3 {
 .hnatu {
     color: rgb(0, 152, 13);
 }
-
+.h1creador{
+    margin-left: 50px;
+    color: blue;
+}
 #h3_circulos {
     text-align: center;
 }
@@ -120,17 +113,15 @@ h3 {
     font-family: monospace;
     background-color: #fcc5f233;
     width: 80%;
-    /* Reduce el ancho a la mitad */
-    margin: auto;
-    /* Centra horizontalmente */
     position: relative;
-    /* Asegura que el margen automático funcione bien */
     width: 50%;
-    /* Reduce el ancho a la mitad */
-    margin: auto;
-    /* Centra horizontalmente */
+    margin: 0;
+} 
+@media (min-width: 992px){
+    #nav{
+        margin: auto;
+    }
 }
-
 /* NAV*/
 .navbar-nav a {
     color: black;

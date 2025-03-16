@@ -15,21 +15,6 @@ h3 {
     font-family: monospace;
 }
 
-.h1homePage {
-    background: url('../img/homepage-titulo.jpg') no-repeat center center / cover;
-    width: 50%;
-    margin: 10px auto;
-    padding: 20px;
-    color: rgb(255, 255, 255);
-    border: 2px solid rgba(128, 128, 128, 0.37);
-    font-size: 3rem;
-    font-weight: bold;
-    -webkit-text-stroke: 1px rgb(255, 40, 140);
-    text-shadow: 10px 10px 10px rgba(158, 158, 158, 0.7);
-    text-align: center;
-
-}
-
 
 .tituloH1 {
     font-size: 2.5rem;
@@ -143,6 +128,21 @@ h3 {
 
 /* HOME PAGE*/
 
+.h1homePage {
+
+    width: 50%;
+    margin: 10px auto;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgba(128, 128, 128, 0.37);
+    font-size: 3rem;
+    font-weight: bold;
+    -webkit-text-stroke: 1px rgb(255, 40, 140);
+    text-shadow: 10px 10px 10px rgba(158, 158, 158, 0.7);
+    text-align: center;
+
+}
+
 .carousel-item img {
     max-height: 900px;
     /* Ajusta la altura máxima según necesites */
@@ -179,6 +179,21 @@ h3 {
     }
 }
 
+.p-carrusel {
+    color: white;
+    font-size: 0.9rem;
+    background-color: rgba(0, 0, 0, 0.366);
+    width: 50%;
+    margin: 20px auto;
+  }
+.h5-carrusel{
+    font-size: 2rem;
+    color: #000000;
+    font-family: fantasy;
+    -webkit-text-stroke: 1px rgb(26, 26, 26);
+    text-shadow: 10px 10px 10px rgba(232, 227, 227, 0.7);
+}
+  
 /*TEORIA COLOR*/
 
 .teoria_rojo {
@@ -937,7 +952,14 @@ h3 {
 }
 
 /*JUEGO*/
-
+.body-juego{
+    background-color: #000000;
+    color: white;
+}
+.footer-juego{
+    background-color: black;
+    color: white;
+}
 .container-canvas {
     width: 90vw;
     height: 45vw;

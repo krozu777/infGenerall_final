@@ -102,10 +102,10 @@ function drawStartScreen() {
   fill(random(255), random(255), random(255));
   textSize(40);
   textAlign(CENTER, CENTER);
-  text("FOUR F", width / 2, height / 3);
+  text("FOUR F (version THREE)", width / 2, height / 3);
 
   textSize(20);
-  text("Haz clic para empezar", width / 2, height / 2);
+  text("Tres Fases - Un logro ", width / 2, height / 2);
 
   fill("100, 200, 255");
   rect(width / 2 - 50, height / 2 + 40, 100, 40, 10);

@@ -373,7 +373,7 @@ function displayScore() {
 function displayGameOver() {
   textSize(20);
   text(
-    `¡Fin del juego! Puntaje: ${score}/${questions.length}`,
+    `¡Fin del juego! Gracias por participar. Puntaje: ${score}/${questions.length}`,
     width / 2,
     height / 2
   ); 

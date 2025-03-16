@@ -187,7 +187,7 @@ h3 {
     margin: 20px auto;
   }
 .h5-carrusel{
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: #000000;
     font-family: fantasy;
     -webkit-text-stroke: 1px rgb(26, 26, 26);
@@ -964,72 +964,62 @@ h3 {
     width: 90vw;
     height: 45vw;
 }
-
-    /* Contenedor del formulario */
-.form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; /* Para que los elementos se apilen verticalmente */
-    max-width: 600px;
-    margin: 0 auto;
+/* Form */
+.form-container {
+    background-color: rgba(0, 207, 207, 0.2);
+    border: 1px solid #00ffff;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-/* Etiquetas de los campos */
+h2 {
+    color: #ff1493;
+    font-size: 2.5rem;
+}
+
 .form-label {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: #000000;
-    text-align: center; /* Centra el texto dentro del label */
-    display: block; /* Asegura que el label ocupe todo el ancho */
-    width: 100%; /* Para que el label ocupe el 100% del contenedor */
-    margin-bottom: 0.5rem;
+    color: #ff9ed2;
+    font-weight: bold;
 }
 
-/* Entrada de texto (input y textarea) */
 .form-control {
-    width: 100%; /* Asegura que el input ocupe el 100% del contenedor */
-    padding: 0.75rem; /* Añade padding para mejorar la visibilidad */
-    margin-bottom: 1rem; /* Espaciado entre los campos */
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #00ffff;
 }
 
-/* Focus de los campos */
-.form-control:focus {
-    border-color: #ff80ab;
-    box-shadow: 0 0 5px rgba(255, 128, 171, 0.5);
-}
-
-/* Estilo del botón de enviar */
 .submit {
-    background-color: #ff80ab;
-    color: white;
+    background-color: #ff1493;
+    color: #ffffff;
     border: none;
-    padding: 1rem 2rem; /* Ajusta el padding */
+    padding: 12px;
     font-size: 1.2rem;
-    text-transform: uppercase;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 1rem; /* Espaciado hacia el botón */
-    width: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    border-radius: 5px;
 }
 
 .submit:hover {
-    background-color: #f50057;
+    background-color: #ff6ec7;
 }
 
-/* Estilo del área de texto */
-textarea.form-control {
-    resize: none; /* Evita que se redimensione el área de texto */
-    height: 10rem; /* Mantén la altura fija */
+/* Footer */
+footer {
+    background-color: #282828;
+    color: #ffffff;
 }
 
-/* Columna del formulario */
-.col-md-6 {
-    max-width: 600px;
-    margin: 0 auto; /* Centra la columna */
+footer .text-reset {
+    color: #000000 !important;
+}
+
+footer .text-reset:hover {
+    color: #ff1493 !important;
+}
+
+footer .container {
+    max-width: 1200px;
+}
+
+footer .col-md-3, footer .col-md-4 {
+    margin-bottom: 20px;
 }
 

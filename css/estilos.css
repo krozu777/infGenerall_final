@@ -3,7 +3,6 @@ body {
     margin: 20px 20px auto;
     padding: 10px 30px 10px 30px;
     background-color: #d98787;
-
 }
 
 .strong {
@@ -90,10 +89,12 @@ h3 {
 .hnatu {
     color: rgb(0, 152, 13);
 }
-.h1creador{
+
+.h1creador {
     margin-left: 50px;
     color: blue;
 }
+
 #h3_circulos {
     text-align: center;
 }
@@ -116,12 +117,14 @@ h3 {
     position: relative;
     width: 50%;
     margin: 0;
-} 
-@media (min-width: 992px){
-    #nav{
+}
+
+@media (min-width: 992px) {
+    #nav {
         margin: auto;
     }
 }
+
 /* NAV*/
 .navbar-nav a {
     color: black;
@@ -621,6 +624,194 @@ h3 {
     border-radius: 4px;
 }
 
+/* FOTOGRAFIA*/
+
+.rosa-pastel {
+    background: #ff91af;
+}
+
+.amarillo-suave {
+    background: #ffd166;
+}
+
+.azul-celeste {
+    background: #70d6ff;
+}
+
+.lila-vibrante {
+    background: #c084fc;
+}
+
+.gris-oscuro {
+    background: #343a40;
+}
+
+.magenta-intenso {
+    background: #d81b60;
+}
+
+.verde-marchito {
+    background: #7a7a52;
+}
+
+.rojo-profundo {
+    background: #5e2129;
+}
+
+.negro-absoluto {
+    background: #000000;
+}
+
+.beige-suave {
+    background: #f4e1c4;
+}
+
+.magenta-intenso {
+    background: #d81b60;
+}
+
+.verde-marchito {
+    background: #7a7a52;
+}
+
+.rojo-profundo {
+    background: #5e2129;
+}
+
+.negro-absoluto {
+    background: #000000;
+}
+
+.beige-suave {
+    background: #f4e1c4;
+}
+
+/* CINE*/
+
+.color-verde-neon {
+    background: #00ff00;
+}
+
+.color-negro {
+    background: #000000;
+}
+
+.color-gris {
+    background: #808080;
+}
+
+.color-azul-oscuro {
+    background: #0a1f44;
+}
+
+.color-rojo {
+    background: #ff0000;
+}
+
+.color-rojo-carmesi {
+    background: #d50000;
+}
+
+.color-dorado {
+    background: #ffd700;
+}
+
+.color-azul-profundo {
+    background: #001f4d;
+}
+
+.color-purpura {
+    background: #800080;
+}
+
+.color-blanco {
+    background: #ffffff;
+}
+
+/* INSTALACIONES */
+
+.color-rojo-intenso {
+    background: #f20000;
+}
+
+.color-amarillo-brillante {
+    background: #ffed00;
+}
+
+.color-azul-turquesa {
+    background: #00f5ff;
+}
+
+.color-purpura-suave {
+    background: #9b59b6;
+}
+
+.color-gris-profundo {
+    background: #2d3436;
+}
+
+.color-amarillo-ocre {
+    background: #cc9600;
+}
+
+.color-marron-oscuro {
+    background: #3f1c03;
+}
+
+.color-rojo-tierra {
+    background: #401d03;
+}
+
+.color-dorado-intenso {
+    background: #d29b01;
+}
+
+.color-marron-quemado {
+    background: #411d03;
+}
+
+/* MÚSICA */
+
+.rosa-pastel {
+    background: #ff91af;
+}
+
+.amarillo-suave {
+    background: #ffd166;
+}
+
+.azul-celeste {
+    background: #70d6ff;
+}
+
+.lila-vibrante {
+    background: #c084fc;
+}
+
+.gris-oscuro {
+    background: #343a40;
+}
+
+.amarillo-fantasmagorico {
+    background: #ffcc00;
+}
+
+.naranja-quemado {
+    background: #ff4500;
+}
+
+.verde-musgoso {
+    background: #008000;
+}
+
+.negro-grisaceo {
+    background: #303030;
+}
+
+.magenta-intenso {
+    background: #c90076;
+}
+
 #media_colorArte
 /*GALERIAS*/
 
@@ -633,6 +824,16 @@ h3 {
     padding: 50px 8%;
 
 }
+
+
+
+
+
+
+
+
+
+
 
 /* cuadricula para la galeria*/
 .gallery {

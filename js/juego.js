@@ -8,7 +8,7 @@ const paleta_RYB = [[255, 0, 0], [255, 255, 0], [0, 0, 255]];
 
 // FASE2. LABERINTO
 let cols, rows;
-let w = 100;
+let w = 40;
 let grid = [];
 let stack = [];
 let current;
@@ -26,37 +26,37 @@ let imgs_paletas = []
 
 let questions = [
   {
-    question: "¿Qué color es el opuesto al verde en el círculo cromático?",
+    question: "En relación al Daltonismoo ¿Qué tipo presenta dificultad para distinguir \n entre rojo y verde debido a la ausencia de conos M?",
     options: ["Rojo", "Azul", "Amarillo", "Naranja"],
     correct: 0,
   },
   {
-    question: "¿Cuál de estos colores es un color luz primario?",
-    options: ["Cyan", "Magenta", "Verde", "Amarillo"],
+    question: "¿Qué colores son considerados 'colores sin matiz'?",
+    options: ["Cyan y Magenta", "No existen colores sin matiz", "Negro y Blanco", "Amarillo y Azul"],
     correct: 2,
   },
   {
     question:
-      "¿Qué fenómeno explica por qué los colores \n parecen cambiar en diferentes iluminaciones?",
-    options: ["Metamerismo", "Dispersion", "Reflexión", "Refracción"],
+      "El color 'Verde Oliva' representa: ",
+    options: ["Estabilidad - madurez", "Suavidad - tranquilidad", "Juventud - dinamismo", "Profundidad - seguridad"],
     correct: 0,
   },
   {
     question:
       "¿Qué células en la retina son responsables de la visión en color?",
-    options: ["Bastones", "Conos", "Fotorreceptores", "Amacrinas"],
+    options: ["Bastones", "Conos", "Fotorreceptores", "Todas son correctas"],
     correct: 1,
   },
   {
     question:
-      "¿Qué teoría del color explica cómo el cerebro procesa los colores opuestos?",
+      "En una Complementaria Dividida se usa: ",
     options: [
-      "Teoría tricromática",
-      "Teoría del color oponente",
-      "Teoría de la absorción",
-      "Teoría espectral",
+      "Colores contiguos en el círculo cromático.",
+      "Un solo color con variaciones de luminosidad",
+      "Colores adyacentes al opuesto.",
+      "Tonos suaves y naturales (beige, gris, blanco).",
     ],
-    correct: 1,
+    correct: 2,
   },
 ];
 
@@ -71,9 +71,9 @@ let bandera_trivia = true;
 
 //FUNCIONES
 function preload() {
-  imgs_paletas.push(loadImage('img/paleta1.jpg'));
-  imgs_paletas.push(loadImage('img/paleta1.jpg'));
-  imgs_paletas.push(loadImage('img/paleta1.jpg'));
+  imgs_paletas.push(loadImage('img/paletacymk.png'));
+  imgs_paletas.push(loadImage('img/paletargb.png'));
+  imgs_paletas.push(loadImage('img/paletaryb.png'));
 }
 
 function setup() {

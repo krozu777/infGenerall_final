@@ -1,82 +1,36 @@
-$(document).ready(function () {
-    var form = $("#contactForm");
-    // Validación de formulario utilizando jQuery
-    form.validate({
-        rules: {
-            nombre: {
-                required: true,
-                maxlength: 40,
-                letras: true
-            },
-            email: {
-                required: true,
-                email: true,
-                emailCorrecto: true,
-            },
-            mensaje: {
-                required: true,
-                maxlength: 250,
-            }
-        },
+/* VALIDACIÓN MAIL */
 
-        // Mensajes de error
-        messages: {
-            nombre: {
-                required: "Por favor, ingrese su nombre.",
-                maxlength: "El nombre debe tener menos de 40 caracteres.",
-                letras: "Ingrese solo letras en el nombre."
-            },
-            email: {
-                required: "Por favor, ingrese su correo electrónico.",
-                email: "Ingrese un correo electrónico válido.",
-                emailCorrecto: "Ingrese una dirección de correo electrónico válida de Hotmail, Gmail o Yahoo.",
-            },
-            mensaje: {
-                required: "Por favor, ingrese un mensaje.",
-                maxlength: "El mensaje debe tener menos de 250 caracteres.",
-            }
-        },
+let valor;
 
-        // Clase de CSS que aplica a los elementos de error de validación
-        errorClass: "is-invalid",
-        errorPlacement: function (error, element) {
-            error.addClass("invalid-feedback");
-            error.insertAfter(element);
-        },
-        highlight: function (element, errorClass, validClass) {
-            $(element).addClass("is-invalid").removeClass("is-valid");
-        },
-        unhighlight: function (element, errorClass, validClass) {
-            $(element).addClass("is-valid").removeClass("is-invalid");
-        }
-    });
+function validarEnvio() { 
+let ck_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/; // Expresión regular
+valor = document.getElementById("email").value;
 
-    // Método para validar que el valor tenga letras y espacios
-    $.validator.addMethod("letras", function (value, element) {
-        return this.optional(element) || /^[A-Za-z\s]+$/.test(value);
-    }, "Ingrese solo letras en el nombre.");
+if(document.formulario.nombre.value=="" || !(ck_email.test(valor))) // Si el nombre o el mail son inválidos
+{
+  if(document.formulario.nombre.value=="") // Si el nombre es el que está inválido
+  {
+  document.getElementById('campo1').innerHTML='*Ingrese su nombre'; // Mensaje aclarando que debe volver a ingresar su nombre
+  document.getElementById('nombre').style.border='#db3019 solid 3px'; // Alerta con el campo con borde rojo
+  } else {
+  document.getElementById('campo1').innerHTML=''; // Mensaje de alerta se borra
+  document.getElementById('nombre').style.border='#32bb39 solid 3px'; // El campo se contornea de verde
+  }
 
-    // Método para validar que los correos sean correctos
-    $.validator.addMethod("emailCorrecto", function (value, element) {
-        return this.optional(element) || /^[^\s@]+@(hotmail|gmail|yahoo)\.[a-z]{2,}$/i.test(value);
-    }, "Ingrese una dirección de correo electrónico válida.");
+  if(!(ck_email.test(valor))) // Si el mail es el que está inválido
+  {
+  document.getElementById('campo2').innerHTML='*Ingrese un email válido'; // Mensaje aclarando que debe volver a ingresar su mail
+  document.getElementById('email').style.border='#db3019 solid 3px'; // Alerta con el campo con borde rojo
+  } else {
+  document.getElementById('campo2').innerHTML=''; // Mensaje de alerta se borra
+  document.getElementById('email').style.border='#32bb39 solid 3px'; // El campo se contornea de verde
+  }
 
-    // Resetear formulario
-    form.on("reset", function () {
-        $("#nombre, #email, #mensaje").val(function (index, value) {
-            return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-        });
+  return false; // En caso de que haya al menos alguno de los dos errores, nos devuelve "false" para evitar que se envíe el mail
 
-        $(".is-invalid").removeClass("is-invalid");
-        $(".is-valid").removeClass("is-valid");
-        $(".invalid-feedback").remove();
-    });
+} else {
+return true; // En caso de que no haya ningún errores, nos devuelve "true" y el mail se envía sin problemas
+}
 
-    // Enviar formulario cuando sea válido
-    $('#submitButton').on('click', function (event) {
-        if (form.valid()) {
-            // Envía el formulario manualmente utilizando JavaScript
-            form[0].submit();
-        }
-    });
-});
+}
+

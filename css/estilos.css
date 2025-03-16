@@ -16,7 +16,7 @@ h3 {
 }
 
 .h1homePage {
-    background: url('img/homepage-titulo.jpg') no-repeat center center / cover;
+    background: url('../img/homepage-titulo.jpg') no-repeat center center / cover;
     width: 50%;
     margin: 10px auto;
     padding: 20px;
@@ -56,7 +56,7 @@ h3 {
 }
 
 .h1arte {
-    background: url('img/colorenelarte.jpg') no-repeat center center / cover;
+    background: url('../img/colorenelarte.jpg') no-repeat center center / cover;
     width: 50%;
     margin: 10px auto;
     padding: 20px;
@@ -945,3 +945,72 @@ h3 {
     width: 90vw;
     height: 45vw;
 }
+
+    /* Contenedor del formulario */
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Para que los elementos se apilen verticalmente */
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Etiquetas de los campos */
+.form-label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #000000;
+    text-align: center; /* Centra el texto dentro del label */
+    display: block; /* Asegura que el label ocupe todo el ancho */
+    width: 100%; /* Para que el label ocupe el 100% del contenedor */
+    margin-bottom: 0.5rem;
+}
+
+/* Entrada de texto (input y textarea) */
+.form-control {
+    width: 100%; /* Asegura que el input ocupe el 100% del contenedor */
+    padding: 0.75rem; /* Añade padding para mejorar la visibilidad */
+    margin-bottom: 1rem; /* Espaciado entre los campos */
+}
+
+/* Focus de los campos */
+.form-control:focus {
+    border-color: #ff80ab;
+    box-shadow: 0 0 5px rgba(255, 128, 171, 0.5);
+}
+
+/* Estilo del botón de enviar */
+.submit {
+    background-color: #ff80ab;
+    color: white;
+    border: none;
+    padding: 1rem 2rem; /* Ajusta el padding */
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem; /* Espaciado hacia el botón */
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.submit:hover {
+    background-color: #f50057;
+}
+
+/* Estilo del área de texto */
+textarea.form-control {
+    resize: none; /* Evita que se redimensione el área de texto */
+    height: 10rem; /* Mantén la altura fija */
+}
+
+/* Columna del formulario */
+.col-md-6 {
+    max-width: 600px;
+    margin: 0 auto; /* Centra la columna */
+}
+

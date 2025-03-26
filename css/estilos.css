@@ -41,9 +41,9 @@ h3 {
 }
 
 .h1arte {
-    background: url('/img/colorenelarte.jpg') no-repeat center center / cover;
+    background: url('../color-arte/img/colorenelarte.jpg') no-repeat center center / cover;
     width: 50%;
-    margin: 10px auto;
+    margin: 10px auto; 
     padding: 20px;
     color: rgb(255, 255, 255);
     border: 2px solid rgba(128, 128, 128, 0.37);
@@ -623,9 +623,10 @@ h3 {
 
 /* CINE, INSTALACIONES ++ */
 
-#media_colorArte {
-    max-width: 80%;
-    max-height: 90%;
+.media_colorArte {
+    height: 800px;
+    padding: 0 2%;
+    object-fit: cover;
 }
 
 .color-box {
@@ -824,7 +825,7 @@ h3 {
     background: #c90076;
 }
 
-#media_colorArte
+
 /*GALERIAS*/
 
 .container-g {
@@ -938,17 +939,6 @@ h3 {
 
 .color-table tr:hover {
     background-color: #ffd5f5;
-}
-
-
-#media_colorArte {
-    width: 500px;
-    /* Ajusta según tu necesidad */
-    height: 800px;
-    /* Mantén una proporción adecuada */
-    object-fit: cover;
-    /* Recorta y ajusta la imagen sin deformarla */
-    display: block;
 }
 
 /*JUEGO*/

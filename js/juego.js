@@ -242,6 +242,7 @@ function gameOver(message) {
   clearInterval(interval);
   if(gameState !== "laberythm") return;
   gameStarted = false;
+  
   alert(message);
 }
 

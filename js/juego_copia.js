@@ -8,7 +8,7 @@ const paleta_RYB = [[255, 0, 0], [255, 255, 0], [0, 0, 255]];
 
 // FASE2. LABERINTO
 let cols, rows;
-let w = 100;
+let w = 40;
 let grid = [];
 let stack = [];
 let current;
@@ -67,7 +67,6 @@ let selectedOption = -1;
 let gameOver_trivia = false;
 let score = 0;
 let bandera_trivia = true;
-let imgEnd;
 
 
 //FUNCIONES
@@ -75,7 +74,6 @@ function preload() {
   imgs_paletas.push(loadImage('img/paletacymk.png'));
   imgs_paletas.push(loadImage('img/paletargb.png'));
   imgs_paletas.push(loadImage('img/paletaryb.png'));
-  imgEnd = loadImage('../img/teoriadelcolor.jpg');
 }
 
 function setup() {
@@ -104,10 +102,10 @@ function drawStartScreen() {
   fill(random(255), random(255), random(255));
   textSize(40);
   textAlign(CENTER, CENTER);
-  text("FOUR F\n(version THREE)", width / 2, height / 3.5);
+  text("FOUR F (version THREE)", width / 2, height / 3);
 
   textSize(20);
-  text("Tres Fases - Un logro", 400, 200);
+  text("Tres Fases - Un logro ", width / 2, height / 2);
 
   fill("100, 200, 255");
   rect(width / 2 - 50, height / 2 + 40, 100, 40, 10);
@@ -149,6 +147,8 @@ function drawLabyrinth() {
   background(c[0], c[1], c[2]);
   bgColorStep += 0.02;
 
+    // console.log(c)
+ 
   if (!gameStarted) {
     timer_lab = 60;
     lives = 3;
@@ -242,7 +242,9 @@ function index(i, j) {
 
 function gameOver(message) {
   clearInterval(interval);
+  if(gameState !== "laberythm") return;
   gameStarted = false;
+  
   alert(message);
 }
 
@@ -326,7 +328,7 @@ function drawQuestions() {
   textAlign(CENTER);
   if (bandera_trivia) {
     textSize(20);
-    text('Teoria + Color', 400, 200);
+    text('Teoria + Color ', 400, 200);
     fill('grey')
     textSize(15);
     text('Presiona ENTER para continuar', 400, 240);
@@ -374,15 +376,14 @@ function displayScore() {
 function displayGameOver() {
   textSize(20);
   text(
-    `Game Over!\n\n Tu Puntaje: ${score}/${questions.length}`,
+    `¡Fin del juego! Gracias por participar. Puntaje: ${score}/${questions.length}`,
     width / 2,
     height / 2
-  );
-  image(imgEnd, 360, 50, 80, 80);
+  ); 
   fill("magenta");
   rect(250, 300, 300, 30, 10);
   fill("white");
-  text('Volver a empezar!', 400, 320);
+  text('Volver a empezar!', 400, 315);
 }
 
 function countdown() {
@@ -391,6 +392,7 @@ function countdown() {
     clearInterval(timer);
   }
 }
+
 //EVENTOS
 function mousePressed() {
   if (gameState === "startScreen" && mouseX > width / 2 - 50 && mouseX < width / 2 + 50 && mouseY > height / 2 + 40 && mouseY < height / 2 + 80) {
@@ -404,7 +406,7 @@ function mousePressed() {
        location.reload();
         
       }
-    }
+    };
     for (let i = 0; i < questions[currentQuestion].options.length; i++) {
       let y = 140 + i * 40;
       if (mouseX > 250 && mouseX < 550 && mouseY > y && mouseY < y + 30) {
@@ -432,8 +434,7 @@ function keyPressed() {
       if (timer_lab > 0) {
         timer_lab--;
       } else {
-        if (gameState === 'labyrinth')
-          gameOver('Perdiste: Se acabó el tiempo');
+        gameOver('Perdiste: Se acabó el tiempo');
       }
     }, 1000);
   }

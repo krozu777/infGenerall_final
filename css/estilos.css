@@ -551,7 +551,7 @@ h3 {
 
 /*COLOR EN EL ARTE*/
 
-#img_colArte {
+.img_colArte {
     height: 400px;
 }
 
@@ -933,6 +933,7 @@ h3 {
     font-size: 1.2em;
 }
 
+
 .color-table tr:nth-child(even) {
     background-color: #6afede16;
 }
@@ -1013,3 +1014,22 @@ footer .col-md-3, footer .col-md-4 {
     margin-bottom: 20px;
 }
 
+.card-global{
+    z-index: 2; 
+    text-decoration: none;
+}
+.footer-background{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.index-video{
+    width: 100%;
+}
+.card-arte{
+    width: 18rem;
+}
+.card-musica{
+    width:315px; 
+    height:315px; 
+    border-radius:8px; 
+    object-fit: cover;
+}

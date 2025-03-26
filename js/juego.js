@@ -8,7 +8,7 @@ const paleta_RYB = [[255, 0, 0], [255, 255, 0], [0, 0, 255]];
 
 // FASE2. LABERINTO
 let cols, rows;
-let w = 100;
+let w = 40;
 let grid = [];
 let stack = [];
 let current;
@@ -75,7 +75,7 @@ function preload() {
   imgs_paletas.push(loadImage('img/paletacymk.png'));
   imgs_paletas.push(loadImage('img/paletargb.png'));
   imgs_paletas.push(loadImage('img/paletaryb.png'));
-  imgEnd = loadImage('../img/teoriadelcolor.jpg');
+  imgEnd = loadImage('img/imgFinal.gif');
 }
 
 function setup() {
@@ -373,16 +373,17 @@ function displayScore() {
 
 function displayGameOver() {
   textSize(20);
+  fill(random(255), random(255), random(255));
   text(
-    `Game Over!\n\n Tu Puntaje: ${score}/${questions.length}`,
+    `Final \n\n Puntaje: ${score}/${questions.length}`,
     width / 2,
     height / 2
   );
   image(imgEnd, 360, 50, 80, 80);
-  fill("magenta");
+  fill((random(255), random(255), random(255)));
   rect(250, 300, 300, 30, 10);
   fill("white");
-  text('Volver a empezar!', 400, 320);
+  text('Inicio', 400, 320);
 }
 
 function countdown() {
